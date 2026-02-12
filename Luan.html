@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrek Dançante</title>
+    <style>
+        @keyframes spin {
+            from { transform: rotate(0deg); font-size : 20px; }
+            to { transform: rotate(360deg); font-size : 100px; }
+        }
+        @keyframes changeColor {
+            0% { background-color: red; }
+            25% { background-color: blue; }
+            50% { background-color: green; }
+            75% { background-color: yellow; }
+            100% { background-color: red; }
+        }
+        @keyframes changeTextColor {
+            0% { color: black; }
+            25% { color: white; }
+            50% { color: gray; }
+            75% { color: orange; }
+            100% { color: black; }
+        }
+        body {
+            animation: none;
+        }
+        body.animar {
+            animation: changeColor 1s linear infinite;
+        }
+        h1 {
+            animation: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 200px;
+        }
+        body.animar h1 {
+            animation: spin 2s alternate infinite, changeTextColor 2s alternate infinite;
+        }
+        p {
+            font-size: 15px;
+            text-align: justify;
+            margin: 20px;
+        }
+        ol, ul {
+            margin: 20px;
+            padding-left: 40px;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 200px;
+            height: auto;
+        }
+        #botaoSom {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        #botaoSom:hover {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- tag <a> é o botão para voltar para a index.html --> 
+    <a href="index.html"> <-- Voltar para a página inicial</a>
+    <h1>Hello World!</h1>
+    <p>Shrek é uma subversão inteligente e bem-humorada dos contos de fadas tradicionais. A história acompanha um ogro solitário e ranzinza que vê sua paz interrompida quando criaturas mágicas são banidas para o seu pântano pelo tirânico Lorde Farquaad.
+
+Para recuperar sua tranquilidade, Shrek faz um acordo com o vilão: ele deve resgatar a Princesa Fiona, que está aprisionada em uma torre guardada por uma dragoa, para que Farquaad possa se casar com ela. Acompanhado por um Burro falante e insistente, Shrek enfrenta perigos e acaba desenvolvendo sentimentos pela princesa.
+
+O enredo atinge seu auge quando Shrek descobre que Fiona carrega seu próprio segredo mágico. No fim, o filme troca o "padrão de beleza" clássico por uma lição sobre autoaceitação, provando que o "felizes para sempre" pode ter uma cara bem diferente daquela dos livros. </p>
+    
+    <ol><p>Melhores personagens (em ordem)</p><li>Shrek</li><li>Fiona</li><li>Burro</li></ol>
+    <ul><p>Destaques do filme</p><li>Humor inteligente</li><li>Trilha sonora marcante</li><li>Mensagem de autoaceitação</li></ul>
+    <p>Fim!</p>
+    <button id="botaoSom" onclick="ativarSom()">Clique aqui para saber mais</button>
+    <audio id="meuAudio" src="audios/hoje-vai-ter-festinha.mp3" autoplay muted></audio>
+    <img src="https://media.tenor.com/aGSZzZMTL8IAAAAM/shrek-shrek-dancing.gif" alt="Description of gif">
+</body>
+<script>
+  function ativarSom() {
+    const audio = document.getElementById('meuAudio');
+    const botao = document.getElementById('botaoSom');
+        const body = document.body;
+
+    audio.muted = false;
+
+    audio.play();
+
+        body.classList.add('animar');
+
+    botao.innerText = "Modo Turbo! 🔥";
+  }
+</script>
+</html>
