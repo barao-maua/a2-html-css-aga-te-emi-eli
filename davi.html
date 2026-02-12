@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Página do Davi</title>
+
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			background-color: blue;
+			background-repeat: no-repeat;
+			background-size: contain;
+			color: blue;
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		}
+
+		main {
+			width: 80%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		a {
+			color: white;
+		}
+
+		h1 {
+			font-size: 16rem;
+		}
+
+		img {
+			width: 40rem;
+		}
+
+		.ancora {
+			width: 100%;
+		}
+
+		.main-text {
+			-webkit-text-stroke: 0.1rem lightblue;
+		}
+
+		.escondido {
+			width: 80%;
+			display: none;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.grupo-haquiado {
+			width: 30rem;
+			position: absolute;
+			top: 5%;
+		}
+
+		.bebe {
+			width: 8rem;
+			position: absolute;
+			bottom: 5%;
+			left: 2%;
+		}
+
+		.emoji {
+			width: 8rem;
+			position: absolute;
+			bottom: 5%;
+			right: 2%;
+		}
+
+		.thanos {
+			width: 8rem;
+			position: absolute;
+			bottom: 5%;
+		}
+
+		.thanos2 {
+			width: 16rem;
+			position: absolute;
+			top: 40%;
+			right: 2%;
+		}
+
+		.hakiado {
+			font-size: 10rem;
+			color: black;
+			animation: spin 0.1s infinite;
+			-webkit-text-stroke: 0.1rem white;
+		}
+
+		@keyframes spin {
+			to { transform: rotate(360deg); }
+		}
+	</style>
+</head>
+<body>
+	<div class="ancora">
+		<a href="index.html" id="hiperlink" onclick="trolagi(event)">
+			<-- Voltar para a página inicial
+		</a>
+	</div>
+
+	<main id="principal">
+
+		<h1 class="main-text">
+			MEGAMENTE
+		</h1>
+
+		<p class="main-text">
+			Megamente é uma animação da DreamWorks (2010) sobre um supervilão alienígena azul que, após derrotar 
+			seu arqui-inimigo Metro Man, perde o propósito de vida. Ao criar um novo herói que se torna vilão, Megamente 
+			precisa se tornar o defensor de Metro City para salvar a cidade e a repórter Rosane, descobrindo seu verdadeiro potencial.
+		</p>
+		<img src="https://pbs.twimg.com/media/FByvdBsX0AUmJbG.jpg" alt="dedezinho megamente" />
+	</main>
+
+	<div class="escondido" id="escondido">
+		<h1 class="hakiado">
+			HAKIADO KKKKKKKKKKKKKKKK
+		</h1>
+
+		<img 
+			src="https://images7.memedroid.com/images/UPLOADED946/5e21bf135f91a.jpeg" 
+			alt="troleikk" 
+			class="grupo-haquiado"	
+		/>
+		<img 
+			src="https://media.tenor.com/btydNtl8qV0AAAAM/boys-dancing.gif" 
+			alt="bebê dançando kk" 
+			class="bebe"
+		/>
+
+		<img 
+			src="https://media.tenor.com/BiL0gx3uQXwAAAAM/laughing-emoji-laugh.gif"
+			alt="emoji"
+			class="emoji"
+		/>
+
+		<img 
+			src="https://media.tenor.com/0Mg3R5jZUnQAAAAM/thanos-dance.gif"
+			alt="thanos kkkk"
+			class="thanos"
+		/>
+
+		<img
+			src="https://i.pinimg.com/originals/d8/9b/a4/d89ba4e965cb9144c82348a1c234d425.gif"
+			alt="thanos 2 kkkk"
+			class="thanos2"
+		/>
+
+		<audio src="./static/musica.mp3" id="musica" loop></audio>
+	</div>
+
+	<script>
+		const a = document.getElementById('hiperlink');
+		const div = document.getElementById('escondido');
+		const main = document.getElementById('principal');
+		const audio = document.getElementById('musica');
+		const body = document.body
+
+		function trolagi(event) {
+			event.preventDefault();
+
+			audio.play()
+
+			main.style.display = 'none'
+			body.style.backgroundColor = 'black'
+			body.style.backgroundImage = 'linear-gradient(to bottom, green, black)'
+			div.style.display = 'flex'
+			a.innerText = 'TROLLEI KKKKKKKKKKKKKKKK'
+		}
+	</script>
+</body>
+</html>
