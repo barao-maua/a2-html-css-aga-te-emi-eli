@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gato Pedinte</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #title {
+            font-size: 40px;
+            color: #ff6347;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            animation: bounce 1s infinite alternate;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 22px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #ff4500;
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            display: none;
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out, bounceIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            60% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .extra-text {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #666;
+            max-width: 550px;
+            line-height: 1.6;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .extra-text span {
+            font-weight: bold;
+            color: #ff6347;
+        }
+
+        .fun-fact {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #333;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .fun-fact p {
+            margin: 0;
+            padding: 10px;
+            background-color: #ff6347;
+            color: white;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="title">O Gato Pedinte</h1>
+
+    
+    <p class="extra-text">No conto original de <span>Charles Perrault</span>, o Gato de Botas não era apenas um felino comum, mas sim um personagem com um <span>espírito aventureiro</span> e uma astúcia invejável. Ele usou sua inteligência para enganar reis e grandes nobres, sempre em busca de novas maneiras de garantir um futuro próspero para seu dono. E adivinha? Ele ainda arruma tempo para pregar algumas peças!</p>
+    
+    <button onclick="changeImage()">Clique para ver o Gato de Botas em ação</button>
+    
+    <img id="image" src="static/gato.jpg" alt="Gato de Botas">
+    <audio id="audio" src="https://www.soundjay.com/animal/cat-meow-1.wav" preload="auto"></audio>
+    
+    <div class="fun-fact">
+        <p><strong>Curiosidade:</strong> Manda uma moeda ai</p>
+    </div>
+
+    <script>
+        function changeImage() {
+            var img = document.getElementById('image');
+            var audio = document.getElementById('audio');
+            img.style.display = 'block';  // Exibe a imagem
+            audio.play();  // Toca o áudio
+        }
+    </script>
+</body>
+</html>
